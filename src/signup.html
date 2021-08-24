@@ -56,10 +56,10 @@
     <!-- Miscellaneous javascript that calls preventDefault method on the event object emitted by "input-form", on-submit -->
     <script>
         let form = document.getElementById('input-form')
+        screen.orientation.lock()
     
         form.addEventListener('submit', e => {
             e.preventDefault()
-            screen.orientation.lock()
             alert("Doesn't work...")
         })
     </script>
