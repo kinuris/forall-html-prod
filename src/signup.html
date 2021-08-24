@@ -11,9 +11,13 @@
 <body>
     <div id="pseudo-body">
         <nav>
-            <a id="icon" href="#">
-                <img src="https://idontknowanymore.xyz/images/icon.svg" alt="Logo">
-            </a>
+            <span>
+                <a id="icon" href="#">
+                    <img src="https://idontknowanymore.xyz/images/icon.svg" alt="Logo" id="icon-image">
+                </a>
+                <p id="nav-icon-separator">|</p>
+                <p>Free Projects</p>
+            </span>
             <a id="menu-dropdown" href="#">
                 <img src="https://idontknowanymore.xyz/images/menu.svg" alt="Menu">
             </a>
@@ -43,6 +47,9 @@
             </form>
             <img src="https://idontknowanymore.xyz/images/Mountain_BG_3840.jpg" alt="BG" id="bg-image">
         </div>
+        <footer>
+
+        </footer>
         <img src="https://idontknowanymore.xyz/images/Winter_BG_3840.jpg" alt="BG" id="bg-image-outer">
     </div>
 
@@ -52,6 +59,7 @@
     
         form.addEventListener('submit', e => {
             e.preventDefault()
+            screen.orientation.lock()
             alert("Doesn't work...")
         })
     </script>
