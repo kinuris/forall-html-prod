@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3C1053;
+}
+
+body p {
+  font-size: 16px;
+  color: #3C1053;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body div nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  place-items: center;
+  background-color: #DF6589;
+  border-bottom: 4px solid #3C1053;
+  width: 80vw;
+}
+
+body div nav p {
+  padding: 5px 10px;
+}
+
+body div nav img {
+  width: 2em;
+  padding: 3px 10px;
+}
+
+body div nav span, body div nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+}
+
+body div img#bg-image-outer {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  height: 100vh;
+  -webkit-filter: blur(3px) opacity(0.2);
+          filter: blur(3px) opacity(0.2);
+}
+
+body div.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80vw;
+  padding: 15px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: rgba(223, 101, 137, 0.61);
+}
+
+body div.form-container span#main-icon-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+}
+
+body div.form-container span#main-icon-group p {
+  margin-top: 10px;
+  font-size: 2.5em;
+}
+
+body div.form-container span#main-icon-group img#main-icon {
+  width: 100px;
+}
+
+body div.form-container img#bg-image {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  z-index: -1;
+}
+
+body div.form-container form {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+}
+
+body div.form-container form p {
+  font-size: 1.75em;
+}
+
+body div.form-container form ul li {
+  margin: 10px 0 0 0;
+  list-style-type: none;
+}
+
+body div.form-container form ul li input {
+  margin: 0;
+  width: 60vw;
+}
+
+body div.form-container form ul li p {
+  font-size: 16px;
+  text-align: left;
+}
+
+body div.form-container form input {
+  color: #3C1053;
+  padding: 2px 5px;
+  border: 2px solid #3C1053;
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: #ebb3c5;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=signup_page_style.css.map */

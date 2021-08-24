@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://idontknowanymore.xyz/styles/signup_page_style.css">
+    <link rel="icon" href="favicon.png">
+    <title>Sign-Up</title>
+</head>
+<body>
+    <div id="pseudo-body">
+        <nav>
+            <a id="icon" href="#">
+                <img src="https://idontknowanymore.xyz/images/icon.svg" alt="Logo">
+            </a>
+            <a id="menu-dropdown" href="#">
+                <img src="https://idontknowanymore.xyz/images/menu.svg" alt="Menu">
+            </a>
+        </nav>
+        <div class="form-container">
+            <span id="main-icon-group">
+                <img src="https://idontknowanymore.xyz/images/icon.svg" alt="For All Icon" id="main-icon">
+                <p>For All</p>
+            </span>
+            <form id="input-form">
+                <p>Sign-Up Form</p>
+                <ul>
+                    <li>
+                        <p>E-mail: </p>
+                        <input type="email" name="email" placeholder="Enter Email Address" maxlength="80">
+                    </li>
+                    <li>
+                        <p>Password: </p>
+                        <input type="password" name="password" placeholder="Enter Password" maxlength="40">
+                    </li>
+                    <li>
+                        <p>Birth Date: </p>
+                        <input type="date" name="b-date">
+                    </li>
+                </ul>
+                <input type="submit" value="Submit">
+            </form>
+            <img src="https://idontknowanymore.xyz/images/Mountain_BG_3840.jpg" alt="BG" id="bg-image">
+        </div>
+        <img src="https://idontknowanymore.xyz/images/Winter_BG_3840.jpg" alt="BG" id="bg-image-outer">
+    </div>
+
+    <!-- Miscellaneous javascript that calls preventDefault method on the event object emitted by "input-form", on-submit -->
+    <script>
+        let form = document.getElementById('input-form')
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            alert("Doesn't work...")
+        })
+    </script>
+</body>
+</html>
