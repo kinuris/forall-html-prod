@@ -3,220 +3,386 @@
   padding: 0;
 }
 
-body {
-  background-color: #3C1053;
+@media (min-aspect-ratio: 16 / 10) {
+  body {
+    background-color: #3C1053;
+  }
+  body p {
+    font-size: 2.5em;
+    color: #3C1053;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  body div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    height: 100vh;
+  }
+  body div nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    background-color: #DF6589;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    border-bottom: 4px solid #3C1053;
+  }
+  body div nav a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px 0 5px 10px;
+  }
+  body div nav p#nav-icon-separator {
+    font-size: 3.5em;
+  }
+  body div nav span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: center;
+  }
+  body div nav span p {
+    text-align: left;
+  }
+  body div div.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: rgba(223, 101, 137, 0.61);
+    width: 90vw;
+  }
+  body div div.form-container img#bg-image {
+    position: absolute;
+    z-index: -1;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
 }
 
-body p {
-  font-size: 16px;
-  color: #3C1053;
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+@media (min-aspect-ratio: 16 / 10) and (min-aspect-ratio: 16 / 10) and (max-aspect-ratio: 18 / 10) {
+  body div div.form-container img#bg-image {
+    height: 100vh;
+  }
 }
 
-body div {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  place-items: center;
-  height: 100vh;
-  overflow: hidden;
+@media (min-aspect-ratio: 16 / 10) and (min-aspect-ratio: 18 / 10) {
+  body div div.form-container img#bg-image {
+    width: 95vw;
+  }
 }
 
-body div nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  place-items: center;
-  background-color: #DF6589;
-  border-bottom: 4px solid #3C1053;
-  width: 80vw;
+@media (min-aspect-ratio: 16 / 10) {
+  body div div.form-container span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    place-items: center;
+  }
+  body div div.form-container span img#main-icon {
+    width: 450px;
+  }
+  body div div.form-container span p {
+    margin-top: 0.5em;
+    font-size: 7em;
+  }
+  body div img#bg-image-outer {
+    position: absolute;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0.2;
+    z-index: -2;
+  }
 }
 
-body div nav p {
-  padding: 5px 10px;
-  text-align: left;
+@media (min-aspect-ratio: 16 / 10) and (min-aspect-ratio: 16 / 10) and (max-aspect-ratio: 18 / 10) {
+  body div img#bg-image-outer {
+    height: 100vh;
+  }
 }
 
-@media (min-width: 400px) and (min-height: 700px) {
+@media (min-aspect-ratio: 16 / 10) and (min-aspect-ratio: 18 / 10) {
+  body div img#bg-image-outer {
+    width: 100vw;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
+  body div form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body div form p {
+    font-weight: bold;
+    font-size: 3em;
+  }
+  body div form input {
+    color: #3C1053;
+    padding: 2px 5px;
+    border: 2px solid #3C1053;
+    margin-bottom: 10px;
+    font-size: 1em;
+    background-color: #ebb3c5;
+    border-radius: 5px;
+    width: 60%;
+  }
+  body div form ul li {
+    list-style-type: none;
+  }
+  body div form ul li input {
+    width: 100%;
+  }
+  body div form ul li p {
+    font-size: 1.3em;
+    text-align: left;
+  }
+  body div form input#submit-btn {
+    margin-top: 1em;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 10) {
+  body {
+    background-color: #3C1053;
+  }
+  body p {
+    font-size: 16px;
+    color: #3C1053;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  body div {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body div nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    place-items: center;
+    background-color: #DF6589;
+    border-bottom: 4px solid #3C1053;
+    width: 80vw;
+  }
+  body div nav p {
+    padding: 5px 10px;
+    text-align: left;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 10) and (min-width: 400px) and (min-height: 700px) {
   body div nav p {
     font-size: 1.25em;
   }
 }
 
-body div nav p#nav-icon-separator {
-  font-size: 2.5em;
+@media (max-aspect-ratio: 16 / 10) {
+  body div nav p#nav-icon-separator {
+    font-size: 2.5em;
+  }
 }
 
-@media (max-height: 600px) {
+@media (max-aspect-ratio: 16 / 10) and (max-height: 600px) {
   body div nav p#nav-icon-separator {
     font-size: 2em;
   }
 }
 
-@media (min-width: 400px) and (min-height: 700px) {
+@media (max-aspect-ratio: 16 / 10) and (min-width: 400px) and (min-height: 700px) {
   body div nav p#nav-icon-separator {
     font-size: 3em;
   }
 }
 
-body div nav img {
-  width: 2em;
-  padding: 3px 10px;
+@media (max-aspect-ratio: 16 / 10) {
+  body div nav img {
+    width: 2em;
+    padding: 3px 10px;
+  }
 }
 
-@media (min-width: 400px) and (min-height: 700px) {
+@media (max-aspect-ratio: 16 / 10) and (min-width: 400px) and (min-height: 700px) {
   body div nav img {
     width: 2.4em;
   }
 }
 
-body div nav img#icon-image {
-  padding: 3px 0 3px 10px;
+@media (max-aspect-ratio: 16 / 10) {
+  body div nav img#icon-image {
+    padding: 3px 0 3px 10px;
+  }
+  body div nav span, body div nav a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: center;
+  }
+  body div nav span p, body div nav a p {
+    padding: 0;
+  }
+  body div img#bg-image-outer {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    height: 100vh;
+    -webkit-filter: blur(3px) opacity(0.2);
+            filter: blur(3px) opacity(0.2);
+  }
+  body div footer {
+    border-top: 4px solid rgba(172, 141, 167, 0.61);
+    background-color: rgba(46, 7, 61, 0.5);
+    width: 100vw;
+    height: 100px;
+  }
 }
 
-body div nav span, body div nav a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-items: center;
-}
-
-body div nav span p, body div nav a p {
-  padding: 0;
-}
-
-body div img#bg-image-outer {
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  height: 100vh;
-  -webkit-filter: blur(3px) opacity(0.2);
-          filter: blur(3px) opacity(0.2);
-}
-
-body div footer {
-  border-top: 4px solid rgba(172, 141, 167, 0.61);
-  background-color: rgba(46, 7, 61, 0.5);
-  width: 100vw;
-  height: 100px;
-}
-
-@media (max-height: 600px) {
+@media (max-aspect-ratio: 16 / 10) and (max-height: 600px) {
   body div footer {
     height: 80px;
   }
 }
 
-body div.form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  width: 80vw;
-  padding: 15px 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  background-color: rgba(223, 101, 137, 0.61);
+@media (max-aspect-ratio: 16 / 10) {
+  body div.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 80vw;
+    padding: 15px 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    background-color: rgba(223, 101, 137, 0.61);
+  }
 }
 
-@media (min-height: 700px) {
+@media (max-aspect-ratio: 16 / 10) and (min-height: 700px) {
   body div.form-container {
     padding-top: 30px;
   }
 }
 
-body div.form-container span#main-icon-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  place-items: center;
+@media (max-aspect-ratio: 16 / 10) {
+  body div.form-container span#main-icon-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    place-items: center;
+  }
+  body div.form-container span#main-icon-group p {
+    margin-top: 10px;
+    font-size: 2.5em;
+  }
+  body div.form-container span#main-icon-group img#main-icon {
+    width: 100px;
+  }
+  body div.form-container img#bg-image {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    z-index: -1;
+  }
+  body div.form-container form {
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    place-items: center;
+  }
 }
 
-body div.form-container span#main-icon-group p {
-  margin-top: 10px;
-  font-size: 2.5em;
-}
-
-body div.form-container span#main-icon-group img#main-icon {
-  width: 100px;
-}
-
-body div.form-container img#bg-image {
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-  z-index: -1;
-}
-
-body div.form-container form {
-  margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  place-items: center;
-}
-
-@media screen and (max-height: 600px) {
+@media screen and (max-aspect-ratio: 16 / 10) and (max-height: 600px) {
   body div.form-container form {
     margin-top: 25px;
   }
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (max-aspect-ratio: 16 / 10) and (min-height: 700px) {
   body div.form-container form {
     margin-top: 60px;
   }
 }
 
-body div.form-container form p {
-  font-size: 1.75em;
-}
-
-body div.form-container form ul li {
-  margin: 10px 0 0 0;
-  list-style-type: none;
-}
-
-body div.form-container form ul li input {
-  margin: 0;
-  width: 60vw;
-}
-
-body div.form-container form ul li p {
-  font-size: 16px;
-  text-align: left;
-}
-
-body div.form-container form input {
-  color: #3C1053;
-  padding: 2px 5px;
-  border: 2px solid #3C1053;
-  margin-top: 10px;
-  font-size: 1em;
-  background-color: #ebb3c5;
-  border-radius: 5px;
+@media (max-aspect-ratio: 16 / 10) {
+  body div.form-container form p {
+    font-size: 1.75em;
+  }
+  body div.form-container form ul li {
+    margin: 10px 0 0 0;
+    list-style-type: none;
+  }
+  body div.form-container form ul li input {
+    margin: 0;
+    width: 60vw;
+  }
+  body div.form-container form ul li p {
+    font-size: 16px;
+    text-align: left;
+  }
+  body div.form-container form input {
+    color: #3C1053;
+    padding: 2px 5px;
+    border: 2px solid #3C1053;
+    margin-top: 10px;
+    font-size: 1em;
+    background-color: #ebb3c5;
+    border-radius: 5px;
+  }
 }
 /*# sourceMappingURL=signup_page_style.css.map */
