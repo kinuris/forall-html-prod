@@ -56,7 +56,7 @@
     <!-- Miscellaneous javascript that calls preventDefault method on the event object emitted by "input-form", on-submit -->
     <script>
         let form = document.getElementById('input-form')
-        screen.orientation.lock()
+        screen.orientation.lock("portrait")
     
         form.addEventListener('submit', e => {
             e.preventDefault()
