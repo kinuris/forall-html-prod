@@ -46,11 +46,44 @@ body div nav {
 
 body div nav p {
   padding: 5px 10px;
+  text-align: left;
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+  body div nav p {
+    font-size: 1.25em;
+  }
+}
+
+body div nav p#nav-icon-separator {
+  font-size: 2.5em;
+}
+
+@media (max-height: 600px) {
+  body div nav p#nav-icon-separator {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+  body div nav p#nav-icon-separator {
+    font-size: 3em;
+  }
 }
 
 body div nav img {
   width: 2em;
   padding: 3px 10px;
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+  body div nav img {
+    width: 2.4em;
+  }
+}
+
+body div nav img#icon-image {
+  padding: 3px 0 3px 10px;
 }
 
 body div nav span, body div nav a {
@@ -60,6 +93,10 @@ body div nav span, body div nav a {
   place-items: center;
 }
 
+body div nav span p, body div nav a p {
+  padding: 0;
+}
+
 body div img#bg-image-outer {
   position: absolute;
   z-index: -2;
@@ -67,6 +104,19 @@ body div img#bg-image-outer {
   height: 100vh;
   -webkit-filter: blur(3px) opacity(0.2);
           filter: blur(3px) opacity(0.2);
+}
+
+body div footer {
+  border-top: 4px solid rgba(172, 141, 167, 0.61);
+  background-color: rgba(46, 7, 61, 0.5);
+  width: 100vw;
+  height: 100px;
+}
+
+@media (max-height: 600px) {
+  body div footer {
+    height: 80px;
+  }
 }
 
 body div.form-container {
@@ -80,6 +130,12 @@ body div.form-container {
       -ms-flex-pack: start;
           justify-content: start;
   background-color: rgba(223, 101, 137, 0.61);
+}
+
+@media (min-height: 700px) {
+  body div.form-container {
+    padding-top: 30px;
+  }
 }
 
 body div.form-container span#main-icon-group {
@@ -112,7 +168,7 @@ body div.form-container img#bg-image {
 }
 
 body div.form-container form {
-  margin-top: 60px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,6 +177,18 @@ body div.form-container form {
       -ms-flex-direction: column;
           flex-direction: column;
   place-items: center;
+}
+
+@media screen and (max-height: 600px) {
+  body div.form-container form {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  body div.form-container form {
+    margin-top: 60px;
+  }
 }
 
 body div.form-container form p {
