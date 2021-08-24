@@ -252,20 +252,18 @@
     list-style-type: none;
   }
   body div form ul li input {
+    font-size: 1.3em;
     width: 100%;
   }
   body div form ul li p {
     font-size: 1.3em;
     text-align: left;
   }
-  body div form input#submit-btn {
-    margin: 1em 0;
-  }
 }
 
 @media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
-  body div form input#submit-btn {
-    margin-top: 0.5em;
+  body div form ul li p {
+    font-size: 1em;
   }
 }
 
