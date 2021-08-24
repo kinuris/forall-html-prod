@@ -49,6 +49,15 @@
   body div nav p#nav-icon-separator {
     font-size: 3.5em;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div nav p#nav-icon-separator {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div nav span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58,6 +67,15 @@
   body div nav span p {
     text-align: left;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div nav span p {
+    font-size: 2em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div div.form-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -106,10 +124,64 @@
   body div div.form-container span img#main-icon {
     width: 450px;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 800px) {
+  body div div.form-container span img#main-icon {
+    width: 350px;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 580px) {
+  body div div.form-container span img#main-icon {
+    width: 280px;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div div.form-container span img#main-icon {
+    width: 220px;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 380px) {
+  body div div.form-container span img#main-icon {
+    width: 180px;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div div.form-container span p {
     margin-top: 0.5em;
     font-size: 7em;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 800px) {
+  body div div.form-container span p {
+    font-size: 5.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 580px) {
+  body div div.form-container span p {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div div.form-container span p {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 380px) {
+  body div div.form-container span p {
+    font-size: 3em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div img#bg-image-outer {
     position: absolute;
     -webkit-filter: blur(4px);
@@ -146,6 +218,16 @@
     font-weight: bold;
     font-size: 3em;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div form p {
+    font-weight: normal;
+    font-size: 2.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div form input {
     color: #3C1053;
     padding: 2px 5px;
@@ -156,6 +238,15 @@
     border-radius: 5px;
     width: 60%;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 380px) {
+  body div form input {
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div form ul li {
     list-style-type: none;
   }
@@ -168,6 +259,12 @@
   }
   body div form input#submit-btn {
     margin-top: 1em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
+  body div form input#submit-btn {
+    margin-top: 0.5em;
   }
 }
 
