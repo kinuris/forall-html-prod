@@ -259,13 +259,13 @@
     text-align: left;
   }
   body div form input#submit-btn {
-    margin-top: 2em;
+    margin: 1em 0;
   }
 }
 
 @media (min-aspect-ratio: 16 / 10) and (max-height: 480px) {
   body div form input#submit-btn {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
 }
 
