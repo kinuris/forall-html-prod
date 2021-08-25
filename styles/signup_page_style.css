@@ -46,6 +46,19 @@
     display: flex;
     padding: 5px 0 5px 10px;
   }
+  body div nav a picture img {
+    padding-top: 3px;
+    width: 3em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 340px) {
+  body div nav a picture img {
+    width: 2.5em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div nav p#nav-icon-separator {
     font-size: 3.5em;
   }
@@ -255,6 +268,15 @@
     font-size: 1.3em;
     width: 100%;
   }
+}
+
+@media (min-aspect-ratio: 16 / 10) and (max-height: 340px) {
+  body div form ul li input {
+    font-size: 1em;
+  }
+}
+
+@media (min-aspect-ratio: 16 / 10) {
   body div form ul li p {
     font-size: 1.3em;
     text-align: left;
