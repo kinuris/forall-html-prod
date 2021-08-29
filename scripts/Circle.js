@@ -35,8 +35,8 @@ export class Circle {
             let dist_of_points = distance(point, new Point(this.pos_x, this.vel_y));
             let y_component = (this.pos_y - point.y) / dist_of_points;
             let x_component = (this.pos_x - point.x) / dist_of_points;
-            this.vel_x = clamp(x_component * 2, -1, 1);
-            this.vel_y = clamp(y_component * 2, -1, 1);
+            this.vel_x = clamp(x_component * 2, -0.5, 0.5);
+            this.vel_y = clamp(y_component * 2, -0.5, 0.5);
         }
     }
     draw(context) {
