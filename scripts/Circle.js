@@ -31,12 +31,15 @@ export class Circle {
         this.vel_y = this.vel_y + randomizer2;
     }
     spreadOutwardFromPoint(point, intensity) {
-        if (distance(point, new Point(this.pos_x, this.pos_y)) <= intensity) {
-            let dist_of_points = distance(point, new Point(this.pos_x, this.vel_y));
+        if (distance(point, new Point(this.pos_x, this.pos_y)) < intensity) {
+            let x_diff = (point.x - this.pos_x);
+            let y_diff = (point.y - this.pos_y);
+            let dist_of_points = Math.hypot(x_diff, y_diff);
             let y_component = (this.pos_y - point.y) / dist_of_points;
             let x_component = (this.pos_x - point.x) / dist_of_points;
-            this.vel_x = clamp(x_component * 2, -0.5, 0.5);
-            this.vel_y = clamp(y_component * 2, -0.5, 0.5);
+            let distanceRatio = clamp(dist_of_points / intensity, 0.2, 1);
+            this.vel_x = x_component * distanceRatio; // clamp(x_component * 2, -1, 1)
+            this.vel_y = y_component * distanceRatio; // clamp(y_component * 2, -1, 1)
         }
     }
     draw(context) {
@@ -53,6 +56,7 @@ export function getColor() {
 }
 export function distance(first_point, second_point) {
     return Math.hypot(first_point.x - second_point.x, first_point.y - second_point.y);
+    // return Math.sqrt(Math.pow((first_point.x - second_point.x), 2) + Math.pow((first_point.y - second_point.y), 2))
 }
 export class Point {
     constructor(x, y) {

@@ -1,4 +1,4 @@
-import { getColor, Circle, Point, distance, getCount, clamp } from './Circle.js';
+import { getColor, Circle, Point, getCount, clamp } from './Circle.js';
 let canvas_obj = document.getElementById('a_canvas');
 let html_obj = document.getElementById('html_obj');
 canvas_obj.width = html_obj.clientWidth;
@@ -18,23 +18,29 @@ for (let i = 0; i < circle_count; i++) {
 }
 canvas_obj.addEventListener('click', (e) => {
     let click_position = new Point(e.clientX, e.clientY);
-    circle_arr.forEach(circle => {
-        let circle_pos = new Point(circle.pos_x, circle.pos_y);
-        if (distance(click_position, circle_pos) <= threshold) {
-            circle.spreadOutwardFromPoint(click_position);
-        }
-    });
+    circle_arr.forEach(circle => circle.spreadOutwardFromPoint(click_position, threshold));
 });
 let c = canvas_obj.getContext('2d');
+let startTime = Date.now();
+let msPerUpdate = 1000 / 60;
 function animate() {
     c.beginPath();
     c.fillStyle = '#0a061310';
     c.fillRect(0, 0, html_obj.clientWidth, html_obj.clientHeight);
-    circle_arr.forEach(circle => {
-        circle.logic();
-        circle.draw(c);
-        circle.update(html_obj.clientWidth, html_obj.clientHeight);
-    });
+    let timePassed = Date.now();
+    if (timePassed - startTime > msPerUpdate) {
+        update();
+        startTime = timePassed;
+    }
+    for (let i = 0; i < circle_arr.length; i++) {
+        circle_arr[i].draw(c);
+    }
     requestAnimationFrame(animate);
+}
+function update() {
+    for (let i = 0; i < circle_arr.length; i++) {
+        circle_arr[i].logic();
+        circle_arr[i].update(html_obj.clientWidth, html_obj.clientHeight);
+    }
 }
 requestAnimationFrame(animate);
