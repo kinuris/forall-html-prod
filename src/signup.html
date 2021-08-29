@@ -3,67 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="https://idontknowanymore.xyz/styles/signup_page_style.css">
-    <link rel="icon" href="https://idontknowanymore.xyz/images/favicon.png">
-    <title>Sign-Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://idontknowanymore.xyz/images/favicon.png" type="image/x-icon">
+    <title>Sign-up</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#root {
+            height: 100vh
+        }
+    </style>
 </head>
 <body>
-    <div id="pseudo-body">
-        <nav>
-            <span>
-                <a id="icon" href="#">
-                    <img src="https://idontknowanymore.xyz/images/icon.svg" alt="Logo" id="icon-image">
-                </a>
-                <p id="nav-icon-separator">|</p>
-                <p>Free Projects</p>
-            </span>
-            <a id="menu-dropdown" href="#">
-                <picture>
-                    <source media="(min-aspect-ratio: 16/10)" srcset="https://idontknowanymore.xyz/images/menu_grid.svg">
-                    <img src="https://idontknowanymore.xyz/images/menu.svg" alt="Menu">
-                </picture>
-            </a>
-        </nav>
-        <div class="form-container">
-            <span id="main-icon-group">
-                <img src="https://idontknowanymore.xyz/images/icon.svg" alt="For All Icon" id="main-icon">
-                <p>For All</p>
-            </span>
-            <form id="input-form">
-                <p>Sign-up Form</p>
-                <ul>
-                    <li>
-                        <p>E-mail: </p>
-                        <input type="email" name="email" placeholder="Enter Email Address" maxlength="80" required>
-                    </li>
-                    <li>
-                        <p>Password: </p>
-                        <input type="password" name="password" placeholder="Enter Password" maxlength="40" minlength="8" required>
-                    </li>
-                    <li>
-                        <p>Birth Date: </p>
-                        <input type="date" name="b-date" required>
-                    </li>
-                </ul>
-                <input type="submit" value="Sign-up" id="submit-btn">
-            </form>
-            <img src="https://idontknowanymore.xyz/images/Mountain_BG_3840.jpg" alt="BG" id="bg-image">
-        </div>
-        <footer>
+    <div id="root"></div>
 
-        </footer>
-        <img src="https://idontknowanymore.xyz/images/Winter_BG_3840.jpg" alt="BG" id="bg-image-outer">
-    </div>
-
-    <!-- Miscellaneous javascript that calls preventDefault method on the event object emitted by "input-form", on-submit -->
-    <script>
-        let form = document.getElementById('input-form')
-    
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            console.log(window.innerWidth/window.innerHeight)
-        })
-    </script>
+    <script src="https://idontknowanymore.xyz/scripts/index.bundle.js"></script>
 </body>
 </html>
