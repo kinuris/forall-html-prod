@@ -30,12 +30,14 @@ export class Circle {
         this.vel_x = this.vel_x + randomizer;
         this.vel_y = this.vel_y + randomizer2;
     }
-    spreadOutwardFromPoint(point) {
-        let dist_of_points = distance(point, new Point(this.pos_x, this.vel_y));
-        let y_component = (this.pos_y - point.y) / dist_of_points;
-        let x_component = (this.pos_x - point.x) / dist_of_points;
-        this.vel_x = clamp(x_component * 2, -2, 2);
-        this.vel_y = clamp(y_component * 2, -2, 2);
+    spreadOutwardFromPoint(point, intensity) {
+        if (distance(point, new Point(this.pos_x, this.pos_y)) <= intensity) {
+            let dist_of_points = distance(point, new Point(this.pos_x, this.vel_y));
+            let y_component = (this.pos_y - point.y) / dist_of_points;
+            let x_component = (this.pos_x - point.x) / dist_of_points;
+            this.vel_x = clamp(x_component * 2, -1, 1);
+            this.vel_y = clamp(y_component * 2, -1, 1);
+        }
     }
     draw(context) {
         context.beginPath();
